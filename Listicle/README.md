@@ -1,8 +1,8 @@
-# WEB103 Project 1 - _Name of App Here_
+# WEB103 Project 1 - _Guide to Starting Your Business_
 
 Submitted by: **Jing Du**
 
-About this web app: **Guide to Starting Your Business: No matter what stage you are at opening up a business, we have a tutorial for you! Looking to brainstorm business ideas and find your niche? We can guide you in the right direction! Finding the right partner? Growing your team? Talking to suppliers? We have a short guide for each one of those. Our guides are sorted into different categories (including business models, product development, sales, market research, and funding) so you can browse or filter to personalize your experience.**
+About this web app: **No matter what stage you are at opening up a business, we have a tutorial for you! Looking to brainstorm business ideas and find your niche? We can guide you in the right direction! Finding the right partner? Growing your team? Talking to suppliers? We have a short guide for each one of those. Our guides are sorted into different categories (including business models, product development, sales, market research, and funding) so you can browse or filter to personalize your experience.**
 
 Time spent: **2** hours
 
