@@ -37,7 +37,7 @@ GIF created with Kap
 
 ## Notes
 
-Posts content are ai generated
+Posts are ai generated
 
 ## License
 
