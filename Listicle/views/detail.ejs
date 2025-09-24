@@ -1,0 +1,21 @@
+<article>
+  <a href="/">← Back to list</a>
+  <h1><%= item.title %></h1>
+  <figure>
+    <img src="<%= item.image %>" alt="<%= item.title %>">
+    <figcaption>
+      <span class="category"><%= item.category %></span>
+    </figcaption>
+  </figure>
+  <p><%= item.text %></p>
+  <dl>
+    <dt>Category</dt>
+    <dd><%= item.category %></dd>
+    <dt>Submitted by</dt>
+    <dd><%= item.submittedBy %></dd>
+    <dt>Slug</dt>
+    <dd><code><%= item.slug %></code></dd>
+  </dl>
+</article>
+
+

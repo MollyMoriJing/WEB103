@@ -1,0 +1,20 @@
+{
+  "name": "listicle",
+  "version": "1.0.0",
+  "description": "Submitted by: **Your name here**",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "nodemon": "^3.1.10"
+  }
+}

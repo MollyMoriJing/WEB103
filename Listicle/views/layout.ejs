@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %> · Guide to Starting Your Business</title>
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body class="theme-dark">
+    <header class="site-header">
+      <div class="container">
+        <nav>
+          <ul>
+            <li class="brand"><a href="/">Starting Your Business Community</a></li>
+          </ul>
+          <ul>
+            <li><a href="#tips">All Tips</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main class="container content">
+      <%- body %>
+    </main>
+    <footer class="container site-footer">
+      <small>© <%= new Date().getFullYear() %> Starting Your Business Community</small>
+    </footer>
+    <script src="/scripts/main.js" defer></script>
+  </body>
+  </html>
+
+

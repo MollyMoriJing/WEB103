@@ -1,0 +1,36 @@
+<section class="hero" style="--hero-img: url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2000&auto=format&fit=crop');">
+  <div class="hero__content container">
+    <h1>Guide to Starting Your Business</h1>
+    <p>No matter your stage, browse concise tips across research, product, sales, and growth.</p>
+    <p><a href="#tips" role="button">Explore Tips</a></p>
+  </div>
+</section>
+
+<section id="tips">
+  <div class="filter-row">
+    <label for="categoryFilter">Filter by category</label>
+    <select id="categoryFilter">
+      <option value="all">All</option>
+      <% categories.forEach(c => { %>
+        <option value="<%= c %>"><%= c %></option>
+      <% }) %>
+    </select>
+  </div>
+  <div class="grid cards">
+    <% items.forEach((i) => { %>
+      <article class="card" data-category="<%= i.category %>">
+        <img src="<%= i.image %>" alt="<%= i.title %>" />
+        <header>
+          <h3><a href="/items/<%= i.slug %>"><%= i.title %></a></h3>
+          <span class="category"><%= i.category %></span>
+        </header>
+        <p><%= i.text %></p>
+        <footer>
+          <small>Submitted by <strong><%= i.submittedBy %></strong></small>
+        </footer>
+      </article>
+    <% }) %>
+  </div>
+</section>
+
+

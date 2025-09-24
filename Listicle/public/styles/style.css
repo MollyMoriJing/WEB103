@@ -1,0 +1,139 @@
+.theme-dark {
+  background: #0f1623;
+  color: #e6edf7;
+}
+
+.site-header {
+  background: transparent;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  backdrop-filter: saturate(140%) blur(6px);
+}
+
+.brand a {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 6rem 0 4rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-img);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 400px at 30% -10%, rgba(18,26,41,0.6), rgba(18,26,41,0.0)),
+              linear-gradient(180deg, rgba(18,26,41,0.0) 0%, rgba(15,22,35,0.9) 80%);
+  z-index: 0;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Ensure hero text is clearly visible */
+.hero__content h1,
+.hero__content p,
+.hero__content a { color: #ffffff; }
+.hero__content h1 { font-weight: 800; letter-spacing: 0.3px; }
+.hero__content p { opacity: 0.95; }
+
+.content {
+  margin-top: 2rem;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.cards .card {
+  background: #141e2f;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.25);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cards .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 32px rgba(0,0,0,0.35);
+  border-color: rgba(255,255,255,0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+header nav {
+  margin-top: 1rem;
+}
+
+.category {
+  background: rgba(255,255,255,0.08);
+  color: #a9b4c6;
+  border-radius: 999px;
+  padding: 0.15rem 0.6rem;
+  font-size: 0.8rem;
+}
+
+figure img {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.site-footer {
+  margin: 3rem auto;
+}
+
+/* Card content layout + overrides to avoid light blocks from Pico defaults */
+.card header,
+.card footer,
+.card p {
+  background: transparent;
+  margin: 0;
+  padding: 0 1rem;
+}
+
+.card header { padding-top: 0.75rem; }
+.card p { padding-top: 0.25rem; padding-bottom: 0.75rem; color: #c6d1e3; }
+.card footer { padding-bottom: 0.85rem; }
+
+.card h3 { margin: 0 0 0.25rem; }
+.card h3 a { color: #e6edf7; text-decoration: none; }
+.card h3 a:hover { text-decoration: underline; color: #b9d7ff; }
+
+.category { margin-left: 0.25rem; }
+
+
