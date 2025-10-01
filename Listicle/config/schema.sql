@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS items (
+    id SERIAL PRIMARY KEY,
+    slug VARCHAR(255) UNIQUE NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    text TEXT NOT NULL,
+    category VARCHAR(100) NOT NULL,
+    image VARCHAR(500) NOT NULL,
+    submitted_by VARCHAR(100) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_items_category ON items(category);
+
+CREATE INDEX IF NOT EXISTS idx_items_slug ON items(slug);

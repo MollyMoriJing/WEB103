@@ -1,4 +1,4 @@
-export const items = [
+/*export const items = [
   {
     slug: 'find-your-niche',
     title: 'Find Your Niche',
@@ -65,5 +65,5 @@ export const items = [
     submittedBy: 'Park'
   }
 ];
-
+*/
 

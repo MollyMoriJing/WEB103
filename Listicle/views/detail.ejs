@@ -12,7 +12,9 @@
     <dt>Category</dt>
     <dd><%= item.category %></dd>
     <dt>Submitted by</dt>
-    <dd><%= item.submittedBy %></dd>
+    <dd><%= item.submitted_by %></dd>
+    <dt>Created</dt>
+    <dd><%= new Date(item.created_at).toLocaleDateString() %></dd>
     <dt>Slug</dt>
     <dd><code><%= item.slug %></code></dd>
   </dl>

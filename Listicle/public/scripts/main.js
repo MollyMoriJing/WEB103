@@ -11,16 +11,37 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 60 * idx);
   });
 
-  // Category filter
-  const filter = document.getElementById('categoryFilter');
-  if (filter) {
-    filter.addEventListener('change', () => {
-      const value = filter.value;
-      cards.forEach((card) => {
-        const matches = value === 'all' || card.dataset.category === value;
-        card.style.display = matches ? '' : 'none';
-      });
+  // Search and filter functionality
+  const searchInput = document.getElementById('searchInput');
+  const categoryFilter = document.getElementById('categoryFilter');
+  
+  function filterCards() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    const categoryValue = categoryFilter.value;
+    
+    cards.forEach((card) => {
+      const title = card.querySelector('h3 a').textContent.toLowerCase();
+      const text = card.querySelector('p').textContent.toLowerCase();
+      const category = card.dataset.category.toLowerCase();
+      
+      const matchesSearch = searchTerm === '' || 
+        title.includes(searchTerm) || 
+        text.includes(searchTerm) || 
+        category.includes(searchTerm);
+      
+      const matchesCategory = categoryValue === 'all' || card.dataset.category === categoryValue;
+      
+      const shouldShow = matchesSearch && matchesCategory;
+      card.style.display = shouldShow ? '' : 'none';
     });
+  }
+  
+  if (searchInput) {
+    searchInput.addEventListener('input', filterCards);
+  }
+  
+  if (categoryFilter) {
+    categoryFilter.addEventListener('change', filterCards);
   }
 });
 
