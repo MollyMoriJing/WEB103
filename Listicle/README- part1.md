@@ -31,7 +31,7 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-<img src='demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='demo_part1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with Kap
 
