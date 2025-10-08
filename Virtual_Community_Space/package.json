@@ -1,0 +1,18 @@
+{
+  "name": "virtual-community-space",
+  "version": "1.0.0",
+  "description": "Virtual Community Space - A platform for discovering local community events",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install",
+    "setup-db": "cd server && node scripts/setup-db.js",
+    "test-api": "node test-api.js",
+    "build": "cd client && npm run build",
+    "start": "cd server && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
