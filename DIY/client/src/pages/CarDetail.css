@@ -1,0 +1,314 @@
+.car-detail {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.detail-header {
+  margin-bottom: 3rem;
+}
+
+.detail-header h2 {
+  font-size: 3rem;
+  color: var(--text-white);
+  margin-top: 1.5rem;
+  font-weight: 900;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px var(--shadow-red);
+}
+
+.detail-content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+}
+
+.detail-visual {
+  background: linear-gradient(180deg, var(--dark-gray) 0%, var(--black) 100%);
+  padding: 2.5rem;
+  border: 2px solid var(--border-gray);
+  box-shadow: 0 10px 50px var(--shadow-dark), 0 0 30px var(--shadow-red);
+}
+
+.large-car-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2.5rem;
+  transition: transform 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 2px solid var(--border-gray);
+  background: linear-gradient(180deg, #0a0a0a 0%, #1a1a1a 100%);
+}
+
+.large-car-preview:hover {
+  transform: scale(1.01);
+}
+
+.car-silhouette-large {
+  position: relative;
+  width: 90%;
+  height: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.car-svg-large {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.9));
+  transition: all 0.5s ease;
+}
+
+.large-car-preview:hover .car-svg-large {
+  transform: scale(1.05);
+  filter: drop-shadow(0 25px 55px rgba(220, 0, 0, 0.5));
+}
+
+.large-car-preview[data-color="black"] .car-body-path {
+  fill: #0a0a0a;
+  stroke: #333;
+}
+
+.large-car-preview[data-color="red"] .car-body-path {
+  fill: #dc0000;
+  filter: drop-shadow(0 8px 25px rgba(220, 0, 0, 0.7));
+}
+
+.large-car-preview[data-color="blue"] .car-body-path {
+  fill: #0066cc;
+  filter: drop-shadow(0 8px 25px rgba(0, 102, 204, 0.6));
+}
+
+.large-car-preview[data-color="white"] .car-body-path {
+  fill: #f5f5f5;
+  filter: drop-shadow(0 8px 25px rgba(255, 255, 255, 0.4));
+}
+
+.large-car-preview[data-color="silver"] .car-body-path {
+  fill: #c0c0c0;
+  filter: drop-shadow(0 8px 25px rgba(192, 192, 192, 0.5));
+}
+
+.interior-detail {
+  text-align: center;
+  padding: 2rem;
+  background: var(--medium-gray);
+  border: 2px solid var(--border-gray);
+}
+
+.interior-detail h4 {
+  margin-bottom: 1.25rem;
+  color: var(--ferrari-red);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+}
+
+.interior-icon-large {
+  font-size: 5rem;
+  display: block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 6px 15px rgba(0, 0, 0, 0.7));
+}
+
+.interior-detail p {
+  color: var(--text-white);
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.detail-info {
+  background: linear-gradient(180deg, var(--dark-gray) 0%, var(--black) 100%);
+  padding: 2.5rem;
+  border: 2px solid var(--border-gray);
+  box-shadow: 0 10px 50px var(--shadow-dark);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.info-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-white);
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border-left: 4px solid var(--ferrari-red);
+  padding-left: 1rem;
+}
+
+.specs-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--medium-gray);
+  border: 1px solid var(--border-gray);
+}
+
+.specs-table tr {
+  border-bottom: 1px solid var(--border-gray);
+  transition: background 0.3s;
+}
+
+.specs-table tr:hover {
+  background: var(--light-gray);
+}
+
+.specs-table tr:last-child {
+  border-bottom: none;
+}
+
+.specs-table td {
+  padding: 1.25rem 1.5rem;
+}
+
+.specs-table .spec-label {
+  font-weight: 900;
+  color: var(--ferrari-red);
+  width: 40%;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+}
+
+.specs-table .spec-value {
+  color: var(--text-white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.price-section {
+  background: linear-gradient(135deg, var(--ferrari-red) 0%, var(--ferrari-red-dark) 100%);
+  padding: 2.5rem;
+  border: 3px solid var(--ferrari-red);
+  color: white;
+  text-align: center;
+  box-shadow: 0 10px 40px var(--shadow-red);
+  position: relative;
+  overflow: hidden;
+}
+
+.price-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.price-section h3 {
+  color: white;
+  opacity: 0.95;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+
+.detail-price {
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 1;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.btn-edit-large,
+.btn-delete-large {
+  flex: 1;
+  padding: 1.25rem;
+  border: 2px solid var(--border-gray);
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.btn-edit-large {
+  background: linear-gradient(135deg, var(--ferrari-red) 0%, var(--ferrari-red-dark) 100%);
+  color: white;
+  border-color: var(--ferrari-red);
+}
+
+.btn-edit-large:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 35px var(--shadow-red);
+  border-color: var(--ferrari-yellow);
+}
+
+.btn-delete-large {
+  background: var(--dark-gray);
+  color: white;
+  border-color: var(--border-gray);
+}
+
+.btn-delete-large:hover {
+  background: var(--ferrari-red-dark);
+  border-color: var(--ferrari-red);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 35px var(--shadow-red);
+}
+
+.created-at {
+  color: var(--text-gray);
+  font-size: 0.875rem;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-gray);
+}
+
+@media (max-width: 1100px) {
+  .detail-content {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-header h2 {
+    font-size: 2.25rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .detail-actions {
+    flex-direction: column;
+  }
+
+  .detail-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .detail-price {
+    font-size: 2.25rem;
+  }
+}
